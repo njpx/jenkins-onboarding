@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Run The Example 1') {
             steps {
-                grep -o -i "devops" example2.txt | wc -l
+                echo "Hi"
             }
         }
         stage('Run The Example 2') {
             steps {
-                sed -i.bak 's/devops/hello_world/g' file1.txt
+                echo "Hi"
             }
         }
     }

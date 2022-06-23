@@ -4,12 +4,16 @@ pipeline {
     stages {
         stage('Run The Exercise 1') {
             steps {
+                sh '''
                 . ./exercise1.sh
+                '''
             }
         }
         stage('Run The Exercise 2') {
             steps {
+                sh '''
                 . ./exercise2.sh
+                '''
             }
         }
     }

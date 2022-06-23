@@ -12,7 +12,7 @@ pipeline {
         stage('Run The Example 2') {
             steps {
                 sh '''
-                sed -i.bak 's/devops/hello_world/g' file1.txt
+                sed -i.bak 's/devops/hello_world/g' example.txt
                 '''
             }
         }

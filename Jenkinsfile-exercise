@@ -4,12 +4,16 @@ pipeline {
     stages {
         stage('Run The Example 1') {
             steps {
+                sh '''
                 grep -o -i "devops" example.txt | wc -l
+                '''
             }
         }
         stage('Run The Example 2') {
             steps {
+                sh '''
                 sed -i.bak 's/devops/hello_world/g' file1.txt
+                '''
             }
         }
     }

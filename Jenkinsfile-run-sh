@@ -1,0 +1,16 @@
+#!/bin/sh
+pipeline {
+    agent any
+    stages {
+        stage('Run The Exercise 1') {
+            steps {
+                . ./exercise1.sh
+            }
+        }
+        stage('Run The Exercise 2') {
+            steps {
+                . ./exercise2.sh
+            }
+        }
+    }
+}
